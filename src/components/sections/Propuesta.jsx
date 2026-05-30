@@ -35,17 +35,17 @@ const fases = [
   {
     numero: 'FASE 1',
     titulo: 'Mapeo y Registro',
-    descripcion: 'Carga ágil del negocio con soporte de líderes de la junta.',
+    descripcion: 'Carga ágil de negocios en el micrositio.',
   },
   {
     numero: 'FASE 2',
     titulo: 'Capacitación Práctica',
-    descripcion: 'Talleres intergeneracionales de uso de billeteras virtuales.',
+    descripcion: 'Talleres intergeneracionales de uso de billeteras virtuales y otras plataformas digitales.',
   },
   {
     numero: 'FASE 3',
     titulo: 'Visibilidad y Ventas',
-    descripcion: 'Acceso a clientes locales y foráneos a través del directorio.',
+    descripcion: 'Acceso a clientes locales y foráneos a través del directorio que estara disponible en el micrositio.',
   },
 ];
 
@@ -146,7 +146,7 @@ export default function Propuesta() {
             Esquema de Red de Economía Local
           </h3>
           <p className="text-slate-600 text-sm leading-relaxed max-w-2xl">
-            Nuestra propuesta no solo georreferencia los comercios populares; establece una{' '}
+            Esta propuesta no solo georreferencia los comercios populares; establece una{' '}
             <strong className="text-slate-900">arquitectura de apoyo mutuo</strong>. Los jóvenes
             del barrio actúan como "dinamizadores digitales" ayudando a los adultos mayores a
             implementar códigos QR y catálogos en WhatsApp.

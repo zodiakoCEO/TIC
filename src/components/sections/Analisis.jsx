@@ -41,7 +41,8 @@ export default function Analisis() {
               {[
                 { label: "Acceso a Smartphone con datos moviles", score: 82 },
                 { label: "Uso Whatsapp para ventas/pedidos", score: 46 },
-                { label: "Presencia en mapas digitales o buscadores (Google Maps, Waze)", score: 8 }
+                { label: "Presencia en mapas digitales o buscadores (Google Maps, Waze)", score: 8 },
+                { label: "Uso de billeteras digitales (Nequi, Bancolombia, DaviPlata etc...) ", score: 56 }
               ].map((item, i) => (
                 <div key={i}>
                   <div className="flex justify-between text-sm mb-1">

@@ -27,7 +27,7 @@ const limitesMagnolia = [
 ];
 
 const emprendimientosIniciales = [
-  { nombre: 'Obleas y solteritas caseras', lat: 6.1758719, lng: -75.5817524 },
+  { nombre: 'Obleas y solteritas caseras', lat: 6.1756916, lng: -75.5800201 },
   { nombre: 'Saxofon en vivo', lat: 6.1716832, lng: -75.5804983 }
 ];
 

@@ -15,7 +15,7 @@ export default function Header() {
             </p>
           </div>
           <div className="text-sm text-slate-500">
-            Creado por DIANA ARTEMISA ARBELAEZ XD.
+            Creado por DIANA ARTEMISA ARBELAEZ ARBELAEZ
           </div>
         </div>
       </div>

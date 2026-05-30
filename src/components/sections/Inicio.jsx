@@ -24,7 +24,7 @@ export default function Inicio({ setActiveTab }) {
               {expanded ? (
                 <>
                   <p>
-                    Las llamadas ciudades inteligentes suelen definirse desde la infraestructura tecnológica y la conectividad global. Sin embargo, nuestra experiencia en los barrios de Castilla (Medellín) y La Magnolia (Envigado) nos invita a repensar este concepto desde abajo, desde la vida cotidiana y las prácticas comunitarias que sostienen la economía popular.
+                    Las llamadas ciudades inteligentes suelen definirse desde la infraestructura tecnológica y la conectividad global. Sin embargo, nuestra experiencia en el barrio La Magnolia (Envigado) nos invita a repensar este concepto desde abajo, desde la vida cotidiana y las prácticas comunitarias que sostienen la economía popular.
                   </p>
                   <p>
                     Este micrositio nace como parte del Proyecto Pedagógico Hábitat‑TIC, y busca mostrar cómo las Tecnologías de la Información y la Comunicación (TIC) pueden convertirse en herramientas de apropiación social del conocimiento, fortaleciendo la soberanía alimentaria y comercial de las familias. No se trata de tecnología para el consumo, sino de tecnología como puente pedagógico que une saberes locales con dinámicas urbanas contemporáneas.
@@ -37,7 +37,7 @@ export default function Inicio({ setActiveTab }) {
               ) : (
                 <>
                   <p>
-                    Las llamadas ciudades inteligentes suelen definirse desde la infraestructura tecnológica y la conectividad global. Sin embargo, nuestra experiencia en los barrios de Castilla (Medellín) y La Magnolia (Envigado) nos invita a repensar este concepto desde abajo, desde la vida cotidiana y las prácticas comunitarias que sostienen la economía popular...
+                    Las llamadas ciudades inteligentes suelen definirse desde la infraestructura tecnológica y la conectividad global. Sin embargo, nuestra experiencia en el barrio La Magnolia (Envigado) nos invita a repensar este concepto desde abajo, desde la vida cotidiana y las prácticas comunitarias que sostienen la economía popular...
                     <button onClick={() => setExpanded(true)} className="ml-2 text-sm text-teal-600 font-bold underline hover:text-teal-800">Ver más</button>
                   </p>
                 </>
