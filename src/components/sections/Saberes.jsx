@@ -1,60 +1,204 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import useAnimeReveal from '../../hooks/useAnimeReveal';
+import beatriz from '../../assets/beatriz.jpeg';
+import andres from '../../assets/andres.jpeg';
+// Iconos de saberes flaticons
+import biometria from '../../assets/biometria.png';
+import ayudar from '../../assets/ayudar.png';
+import conversacion from '../../assets/conversacion.png';
+import crear from '../../assets/crear.png';
+
+// Componente de reproductor de audio
+function AudioPlayer({ src, label }) {
+  const audioRef = useRef(null);
+  const [playing, setPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (playing) { audio.pause(); } else { audio.play(); }
+    setPlaying(!playing);
+  };
+
+  const handleTimeUpdate = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    setCurrentTime(audio.currentTime);
+    setProgress((audio.currentTime / audio.duration) * 100 || 0);
+  };
+
+  const handleLoadedMetadata = () => setDuration(audioRef.current?.duration || 0);
+
+  const handleSeek = (e) => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+  };
+
+  const handleEnded = () => setPlaying(false);
+
+  const fmt = (s) => `${Math.floor(s / 60)}:${Math.floor(s % 60).toString().padStart(2, '0')}`;
+
+  return (
+    <div className="mt-4 bg-slate-50 rounded-2xl p-4 border border-slate-100">
+      <audio
+        ref={audioRef}
+        src={src}
+        onTimeUpdate={handleTimeUpdate}
+        onLoadedMetadata={handleLoadedMetadata}
+        onEnded={handleEnded}
+      />
+      <div className="flex items-center gap-3">
+        <button
+          onClick={togglePlay}
+          className="w-10 h-10 rounded-full bg-teal-600 hover:bg-teal-700 flex items-center justify-center flex-shrink-0 transition-colors shadow-sm"
+          aria-label={playing ? 'Pausar' : 'Reproducir'}
+        >
+          {playing ? (
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white">
+              <rect x="6" y="4" width="4" height="16" rx="1"/>
+              <rect x="14" y="4" width="4" height="16" rx="1"/>
+            </svg>
+          ) : (
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white">
+              <polygon points="5,3 19,12 5,21"/>
+            </svg>
+          )}
+        </button>
+        <div className="flex-1 flex flex-col gap-1">
+          <p className="text-xs font-medium text-slate-600 truncate">{label}</p>
+          <div
+            className="w-full h-2 bg-slate-200 rounded-full cursor-pointer overflow-hidden"
+            onClick={handleSeek}
+          >
+            <div
+              className="h-full bg-teal-500 rounded-full transition-all duration-100"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+          <div className="flex justify-between text-xs text-slate-400">
+            <span>{fmt(currentTime)}</span>
+            <span>{duration ? fmt(duration) : '--:--'}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Card de persona con reseña + audio
+function PersonaCard({ img, nombre, edad, rol, lugar, resena, audioSrc, audioLabel }) {
+  return (
+    <div className="bg-white rounded-[28px] overflow-hidden border border-slate-100 shadow-sm flex flex-col">
+      <div className="relative h-72 overflow-hidden">
+        <img src={img} alt={nombre} className="w-full h-full object-cover object-top" />
+        <span className="absolute top-4 right-4 text-xs font-semibold px-3 py-1 rounded-full border backdrop-blur-sm bg-white/80 text-slate-700 border-slate-200">
+          {rol}
+        </span>
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/30 to-transparent" />
+        <div className="absolute bottom-4 left-4">
+          <p className="text-white font-bold text-lg leading-tight">{nombre}</p>
+          {edad && <p className="text-white/80 text-sm">{edad} años</p>}
+        </div>
+      </div>
+      <div className="p-6 flex flex-col flex-1">
+        <p className="text-xs text-slate-400 font-medium uppercase tracking-wide mb-3">{lugar}</p>
+        <blockquote className="pl-4 border-l-2 border-teal-400 text-slate-600 text-sm leading-relaxed italic flex-1">
+          "{resena}"
+        </blockquote>
+        {audioSrc && <AudioPlayer src={audioSrc} label={audioLabel || `Voz de ${nombre}`} />}
+      </div>
+    </div>
+  );
+}
 
 export default function Saberes() {
   const container = useRef(null);
   useAnimeReveal(container);
 
+  const categorias = [
+    { title: "Comunicación", desc: "Narrativas locales y medios comunitarios.", icon: conversacion },
+    { title: "Economía popular", desc: "Emprendimientos y tejido social.", icon: crear },
+    { title: "Cuidado colectivo", desc: "Redes de apoyo y comunidad.", icon: ayudar },
+    { title: "Saberes ancestrales", desc: "Prácticas de identidad local.", icon: biometria },
+  ];
+
+  const personas = [
+    {
+      img: beatriz,
+      nombre: "Beatriz",
+      edad: 54,
+      rol: "Emprendedora",
+      lugar: "La Magnolia, Medellín",
+      resena: "Lo que comenzó como un hobby elaborando chocolates artesanales se convirtió en mi emprendimiento. Con el tiempo perfeccioné cada receta y hoy comparto mis productos con más personas a través de WhatsApp.",
+      audioSrc: "/audios/beatriz.mp4",
+      audioLabel: "Beatriz habla sobre su emprendimiento",
+    },
+    {
+      img: andres,
+      nombre: "Andrés",
+      edad: 34,
+      rol: "Músico comunitario",
+      lugar: "La Magnolia, Envigado",
+      resena: "La música es mi vida. Desde hace más de diez años toco saxofón en recepciones familiares, celebraciones y eventos empresariales. Gracias a Instagram y WhatsApp me contacto con clientes y comparto videos de mis presentaciones. Los pagos los recibo por plataformas bancarias, lo que me facilita organizar mi trabajo. Sin embargo, quiero aprender más sobre herramientas digitales para llegar a más personas, potenciar mis ventas y dar a conocer mi música a nuevas audiencias.",
+      audioSrc: "/audios/andres.mp4",
+      audioLabel: "Andrés sobre el poder de la música",
+    },
+  ];
+
   return (
-    <div ref={container} className="bg-white p-8 rounded-2xl shadow-sm border-l-8 border-[#1d4ed8] animate-fadeIn space-y-8">
-      <div data-anime>
-        <h2 className="text-2xl font-bold">Saberes y Prácticas Locales</h2>
-        <p className="text-slate-700 text-lg mt-4">
-          Castilla y La Magnolia aportan un conjunto de saberes que conectan prácticas productivas, cuidado de la ciudad y conocimiento colectivo.
-        </p>
+    <div
+      ref={container}
+      className="bg-white p-8 lg:p-10 rounded-[32px] shadow-sm border border-slate-100 space-y-10"
+      data-anime
+    >
+      {/* Encabezado */}
+      <div data-anime className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+        <div>
+          <span className="text-xs font-semibold text-teal-600 uppercase tracking-widest">
+            VOCES DEL TERRITORIO
+          </span>
+          <h2 className="text-3xl font-black text-slate-900 mt-1">
+            Saberes y Prácticas Locales
+          </h2>
+          <p className="text-slate-500 text-base mt-3 max-w-xl leading-relaxed">
+            La Magnolia tejen conocimiento colectivo. A través de la voz de sus
+            protagonistas, comprendemos cómo las prácticas cotidianas se convierten en
+            motores de desarrollo.
+          </p>
+        </div>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] items-start">
-        <div className="space-y-6" data-anime>
-          <div className="rounded-3xl bg-slate-50 p-6 border border-slate-200 shadow-sm">
-            <h3 className="font-semibold text-slate-900 mb-2">Comunicación</h3>
-            <p className="text-sm text-slate-600">Narrativas locales, radios comunitarias y plataformas de encuentro que visibilizan el valor del barrio.</p>
-          </div>
-          <div className="rounded-3xl bg-slate-50 p-6 border border-slate-200 shadow-sm">
-            <h3 className="font-semibold text-slate-900 mb-2">Economía popular</h3>
-            <p className="text-sm text-slate-600">Mercados y emprendimientos se transforman en tejidos sociales y fuentes de ingreso resilientes.</p>
-          </div>
-          <div className="rounded-3xl bg-slate-50 p-6 border border-slate-200 shadow-sm">
-            <h3 className="font-semibold text-slate-900 mb-2">Cuidado colectivo</h3>
-            <p className="text-sm text-slate-600">Redes de apoyo, comidas compartidas y reparación del espacio como prácticas de comunidad.</p>
-          </div>
-        </div>
-
-        <div className="grid gap-4" data-anime>
-          <div className="overflow-hidden rounded-3xl border border-slate-200 shadow-glow">
+      {/* Categorías con iconos importados */}
+      <div data-anime className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        {categorias.map((item, idx) => (
+          <div
+            key={idx}
+            className="p-5 bg-slate-50 hover:bg-teal-50 rounded-2xl border border-slate-100 hover:border-teal-100 transition-colors group"
+          >
+            {/* ← Aquí el cambio: img en vez de emoji */}
             <img
-              src="https://images.unsplash.com/photo-1520975698517-9fa3a1efad2e?auto=format&fit=crop&w=1200&q=80"
-              alt="Grupo comunitario trabajando en un espacio compartido"
-              className="h-56 w-full object-cover"
+              src={item.icon}
+              alt={item.title}
+              className="w-10 h-10 mb-3 object-contain"
             />
+            <h3 className="font-bold text-slate-900 text-sm mb-1 group-hover:text-teal-700 transition-colors">
+              {item.title}
+            </h3>
+            <p className="text-xs text-slate-500 leading-relaxed">{item.desc}</p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="overflow-hidden rounded-3xl border border-slate-200 shadow-glow">
-              <img
-                src="https://images.unsplash.com/photo-1517467139955-5be4a61026d4?auto=format&fit=crop&w=800&q=80"
-                alt="Mercado y productos locales"
-                className="h-44 w-full object-cover"
-              />
-            </div>
-            <div className="overflow-hidden rounded-3xl border border-slate-200 shadow-glow">
-              <img
-                src="https://images.unsplash.com/photo-1497888329096-51c6c950d0e7?auto=format&fit=crop&w=800&q=80"
-                alt="Personas conversando en un espacio urbano"
-                className="h-44 w-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
+        ))}
+      </div>
+
+      {/* Cards de personas */}
+      <div data-anime className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {personas.map((p, idx) => (
+          <PersonaCard key={idx} {...p} />
+        ))}
       </div>
     </div>
   );
