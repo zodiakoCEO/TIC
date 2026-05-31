@@ -1,7 +1,4 @@
-import { useEffect, useRef } from 'react';
-// 1. Importamos la imagen de tu carpeta de assets
-// Asegúrate de que la ruta sea correcta según dónde esté tu Map.jsx
-import pointIcon from '../assets/point.png'; 
+import { useEffect, useRef } from 'react'; 
 
 // Coordenadas estrictas siguiendo el dibujo de la línea negra (sin nudos)
 const limitesMagnolia = [
@@ -27,8 +24,14 @@ const limitesMagnolia = [
 ];
 
 const emprendimientosIniciales = [
+  // Zona noreste
   { nombre: 'Obleas y solteritas caseras', lat: 6.1756916, lng: -75.5800201 },
-  { nombre: 'Saxofon en vivo', lat: 6.1716832, lng: -75.5804983 }
+  // Zona sureste
+  { nombre: 'Saxofon en vivo', lat: 6.1716832, lng: -75.5804983 },
+  // Zona central/oeste
+  { nombre: 'Recetas y productos Venezolanos', lat: 6.1735000, lng: -75.5825000 },
+  // Zona suroeste
+  { nombre: 'Reparación y muebles', lat: 6.1705000, lng: -75.5815000 }
 ];
 
 export default function Map() {
@@ -58,10 +61,10 @@ export default function Map() {
 
       const poligonoBarrio = new window.google.maps.Polygon({
         paths: limitesMagnolia,
-        strokeColor: "#ef4444", 
+        strokeColor: "#a855f7", 
         strokeOpacity: 0.8,
         strokeWeight: 3,
-        fillColor: "#ef4444", 
+        fillColor: "#a855f7", 
         fillOpacity: 0.1, 
       });
       poligonoBarrio.setMap(mapInstance.current);
@@ -69,11 +72,11 @@ export default function Map() {
       const agregarMarcador = (lat, lng, nombre) => {
         const etiquetaNaranja = document.createElement('div');
         // Reduje un poco el padding izquierdo (pl-1) para que el icono se vea más pegado al borde
-        etiquetaNaranja.className = 'bg-[#ea580c] text-white pl-1.5 pr-3 py-1 rounded-full font-bold text-xs shadow-lg border-2 border-white flex items-center gap-1.5 hover:scale-110 transition-transform cursor-pointer';
+        etiquetaNaranja.className = 'bg-purple-600 text-white pl-1.5 pr-3 py-1 rounded-full font-bold text-xs shadow-lg border-2 border-white flex items-center gap-1.5 hover:scale-110 transition-transform cursor-pointer';
         
         // 2. Reemplazamos el span por la etiqueta <img> usando la variable importada
         // Ajustamos con Tailwind: w-5 h-5 (tamaño) y object-contain (para que no se deforme)
-        etiquetaNaranja.innerHTML = `<img src="${pointIcon}" alt="Pin" class="w-5 h-5 object-contain drop-shadow-sm" /> <span>${nombre}</span>`;
+        etiquetaNaranja.innerHTML = `<img src="/pin-history.svg" alt="Pin" class="w-5 h-5 object-contain drop-shadow-sm" /> <span>${nombre}</span>`;
 
         new AdvancedMarkerElement({
           map: mapInstance.current,
@@ -97,8 +100,8 @@ export default function Map() {
         }
 
         const pinBorrador = new PinElement({
-          background: "#3b82f6", 
-          borderColor: "#1d4ed8",
+          background: "#a855f7", 
+          borderColor: "#7c3aed",
           glyphColor: "white",
         });
 
@@ -115,9 +118,9 @@ export default function Map() {
         formContainer.innerHTML = `
           <p class="text-sm font-bold text-slate-800 mb-1">Agregar Emprendimiento</p>
           <p class="text-[11px] text-slate-500 mb-3 leading-tight">Mueve el pin azul si la ubicación no es exacta.</p>
-          <input type="text" id="nombre-local" placeholder="Ej: Panadería La Abuela..." class="w-full border border-slate-300 rounded px-2 py-1.5 mb-3 text-sm focus:outline-none focus:ring-1 focus:ring-teal-500" />
+          <input type="text" id="nombre-local" placeholder="Ej: Panadería La Abuela..." class="w-full border border-slate-300 rounded px-2 py-1.5 mb-3 text-sm focus:outline-none focus:ring-1 focus:ring-purple-500" />
           <div class="flex gap-2">
-            <button id="btn-guardar" class="bg-teal-600 text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-teal-700 w-full transition-colors">Guardar</button>
+            <button id="btn-guardar" class="bg-purple-600 text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-purple-700 w-full transition-colors">Guardar</button>
             <button id="btn-cancelar" class="bg-slate-100 text-slate-600 px-3 py-1.5 rounded text-xs font-bold hover:bg-slate-200 w-full transition-colors">Cancelar</button>
           </div>
         `;
@@ -169,7 +172,7 @@ export default function Map() {
       
       {/* 3. Etiqueta flotante superior actualizada con la misma imagen */}
       <div className="absolute top-4 z-20 bg-white/95 px-5 py-3 rounded-full shadow-lg text-sm font-semibold text-slate-800 border border-slate-100 flex items-center gap-2 pointer-events-none">
-        <img src={pointIcon} alt="Icono mapa" className="w-5 h-5 object-contain" /> Toca cualquier parte para agregar un local
+        <img src="/pin-history.svg" alt="Icono mapa" className="w-5 h-5 object-contain" /> Toca cualquier parte para agregar un local
       </div>
       
       <div ref={mapContainer} className="w-full h-full absolute inset-0 z-10" />

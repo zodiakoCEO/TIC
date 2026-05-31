@@ -13,7 +13,7 @@ export default function Cierre() {
         <h2 className="text-3xl font-black text-slate-900">Cierre del Recorrido</h2>
         <p className="text-slate-600 text-lg mt-4 max-w-2xl">
           Sintetizamos los aprendizajes clave para seguir construyendo ciudades más justas, 
-          conectadas y respetuosas de los saberes locales en La Magnolia y Castilla.
+          conectadas y respetuosas de los saberes locales en La Magnolia.
         </p>
       </div>
 
@@ -45,22 +45,22 @@ export default function Cierre() {
       </div>
 
       {/* 4. Footer de Cierre (Invertido a estilo Teal) */}
-      <footer className="bg-teal-700 rounded-[32px] p-8 text-white grid grid-cols-1 md:grid-cols-2 gap-8 items-center" data-anime>
+      <footer className="bg-purple-700 rounded-[32px] p-8 text-white grid grid-cols-1 md:grid-cols-2 gap-8 items-center" data-anime>
         <div className="space-y-2">
           <h4 className="font-black text-xl">Visión de Futuro</h4>
-          <p className="text-teal-100 text-sm">
+          <p className="text-purple-100 text-sm">
             Documentar y replicar las prácticas que ya funcionan. Cada iniciativa local aporta a una ciudad más equitativa cuando comparte saberes.
           </p>
         </div>
         
-        <div className="flex justify-end gap-6 border-t border-teal-600 pt-6 md:border-t-0 md:pt-0">
+        <div className="flex justify-end gap-6 border-t border-purple-600 pt-6 md:border-t-0 md:pt-0">
           <div className="text-center">
-            <span className="block text-teal-200 font-bold text-xs uppercase tracking-wider">Estado</span>
+            <span className="block text-purple-200 font-bold text-xs uppercase tracking-wider">Estado</span>
             <span className="block font-semibold mt-1">En Crecimiento</span>
           </div>
-          <div className="w-px bg-teal-600 h-10"></div>
+          <div className="w-px bg-purple-600 h-10"></div>
           <div className="text-center">
-            <span className="block text-teal-200 font-bold text-xs uppercase tracking-wider">Objetivo</span>
+            <span className="block text-purple-200 font-bold text-xs uppercase tracking-wider">Objetivo</span>
             <span className="block font-semibold mt-1">Territorial</span>
           </div>
         </div>

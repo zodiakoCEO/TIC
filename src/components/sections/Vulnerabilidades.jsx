@@ -54,12 +54,12 @@ export default function Vulnerabilidades() {
         
         <div className="flex justify-end gap-6 border-t border-slate-700 pt-6 md:border-t-0 md:pt-0">
           <div className="text-center">
-            <span className="block text-teal-400 font-bold text-xs uppercase tracking-wider">Enfoque</span>
+            <span className="block text-purple-400 font-bold text-xs uppercase tracking-wider">Enfoque</span>
             <span className="block font-semibold mt-1">Colaborativo</span>
           </div>
           <div className="w-px bg-slate-700 h-10"></div>
           <div className="text-center">
-            <span className="block text-teal-400 font-bold text-xs uppercase tracking-wider">Prioridad</span>
+            <span className="block text-purple-400 font-bold text-xs uppercase tracking-wider">Prioridad</span>
             <span className="block font-semibold mt-1">Cuidado</span>
           </div>
         </div>

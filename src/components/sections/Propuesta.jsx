@@ -56,7 +56,7 @@ export default function Propuesta() {
   return (
     <div
       ref={container}
-      className="bg-white p-8 rounded-2xl shadow-sm border-l-8 border-[#047857] animate-fadeIn space-y-10"
+      className="bg-white p-8 rounded-2xl shadow-sm border-l-8 border-[#a855f7] animate-fadeIn space-y-10"
     >
       {/* ── Encabezado ── */}
       <div data-anime>
@@ -96,7 +96,7 @@ export default function Propuesta() {
                   <td className="px-5 py-4 text-slate-600">{p.publico}</td>
                   <td className="px-5 py-4 text-slate-600">{p.certificacion}</td>
                   <td className="px-5 py-4">
-                    <span className="inline-block bg-emerald-50 text-[#047857] font-semibold text-xs px-3 py-1 rounded-full border border-emerald-200">
+                    <span className="inline-block bg-purple-50 text-purple-600 font-semibold text-xs px-3 py-1 rounded-full border border-purple-200">
                       {p.costo}
                     </span>
                   </td>
@@ -105,7 +105,7 @@ export default function Propuesta() {
                       href={p.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-[#047857] font-semibold text-xs hover:underline underline-offset-2 transition-all"
+                      className="inline-flex items-center gap-1.5 text-purple-600 font-semibold text-xs hover:underline underline-offset-2 transition-all"
                     >
                       {p.label}
                       <svg
@@ -136,7 +136,7 @@ export default function Propuesta() {
       {/* ── Pilar Tecnológico ── */}
       <div data-anime className="rounded-3xl bg-slate-50 border border-slate-200 shadow-sm p-8 space-y-6">
         {/* Badge */}
-        <span className="inline-block bg-[#047857]/10 text-[#047857] text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full border border-[#047857]/20">
+        <span className="inline-block bg-purple-600/10 text-purple-600 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full border border-purple-600/20">
           Pilar Tecnológico
         </span>
 
@@ -160,7 +160,7 @@ export default function Propuesta() {
               key={fase.numero}
               className="rounded-3xl bg-white border border-slate-200 shadow-sm p-6 space-y-2"
             >
-              <span className="text-xs font-bold tracking-widest text-[#047857] uppercase">
+              <span className="text-xs font-bold tracking-widest text-purple-600 uppercase">
                 {fase.numero}
               </span>
               <h4 className="font-semibold text-slate-900 text-base leading-tight">

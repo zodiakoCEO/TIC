@@ -55,7 +55,7 @@ function AudioPlayer({ src, label }) {
       <div className="flex items-center gap-3">
         <button
           onClick={togglePlay}
-          className="w-10 h-10 rounded-full bg-teal-600 hover:bg-teal-700 flex items-center justify-center flex-shrink-0 transition-colors shadow-sm"
+          className="w-10 h-10 rounded-full bg-purple-600 hover:bg-purple-700 flex items-center justify-center flex-shrink-0 transition-colors shadow-sm"
           aria-label={playing ? 'Pausar' : 'Reproducir'}
         >
           {playing ? (
@@ -76,7 +76,7 @@ function AudioPlayer({ src, label }) {
             onClick={handleSeek}
           >
             <div
-              className="h-full bg-teal-500 rounded-full transition-all duration-100"
+              className="h-full bg-purple-500 rounded-full transition-all duration-100"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -131,16 +131,16 @@ export default function Saberes() {
     {
       img: beatriz,
       nombre: "Beatriz",
-      edad: 54,
+      edad: 60,
       rol: "Emprendedora",
-      lugar: "La Magnolia, Medellín",
+      lugar: "La Magnolia, Envigado",
       resena: "Lo que comenzó como un hobby elaborando chocolates artesanales se convirtió en mi emprendimiento. Con el tiempo perfeccioné cada receta y hoy comparto mis productos con más personas a través de WhatsApp.",
       audioSrc: "/audios/beatriz.mp4",
       audioLabel: "Beatriz habla sobre su emprendimiento",
     },
     {
       img: andres,
-      nombre: "Andrés",
+      nombre: "Andrés Jimenez",
       edad: 34,
       rol: "Músico comunitario",
       lugar: "La Magnolia, Envigado",
@@ -159,7 +159,7 @@ export default function Saberes() {
       {/* Encabezado */}
       <div data-anime className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
         <div>
-          <span className="text-xs font-semibold text-teal-600 uppercase tracking-widest">
+          <span className="text-xs font-semibold text-purple-600 uppercase tracking-widest">
             VOCES DEL TERRITORIO
           </span>
           <h2 className="text-3xl font-black text-slate-900 mt-1">
@@ -178,15 +178,14 @@ export default function Saberes() {
         {categorias.map((item, idx) => (
           <div
             key={idx}
-            className="p-5 bg-slate-50 hover:bg-teal-50 rounded-2xl border border-slate-100 hover:border-teal-100 transition-colors group"
+            className="p-5 bg-slate-50 hover:bg-purple-50 rounded-2xl border border-slate-100 hover:border-purple-100 transition-colors group"
           >
-            {/* ← Aquí el cambio: img en vez de emoji */}
             <img
               src={item.icon}
               alt={item.title}
               className="w-10 h-10 mb-3 object-contain"
             />
-            <h3 className="font-bold text-slate-900 text-sm mb-1 group-hover:text-teal-700 transition-colors">
+            <h3 className="font-bold text-slate-900 text-sm mb-1 group-hover:text-purple-700 transition-colors">
               {item.title}
             </h3>
             <p className="text-xs text-slate-500 leading-relaxed">{item.desc}</p>
@@ -194,7 +193,69 @@ export default function Saberes() {
         ))}
       </div>
 
-      {/* Cards de personas */}
+      {/* Sección de Diálogos de las personas (Testimonios de Oficio y Migración) */}
+      <div data-anime className="space-y-4 pt-4 border-t border-slate-100">
+        <h3 className="font-bold text-slate-900 text-lg flex items-center gap-2">
+          <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+          Relatos y Saberes
+        </h3>
+        <p>
+          Dignificamos el conocimiento empírico de comerciantes locales, migrantes y líderes comunitarios. Creemos firmemente que la sabiduría barrial es un motor económico. El conocimiento no es solo académico; se vive en el asfalto, las recetas, los oficios
+          tradicionales у la resiliencia intergeneracional.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Don Alfonso */}
+          <div className="border border-slate-100 rounded-3xl p-6 shadow-sm bg-white hover:border-slate-200 transition-colors">
+            <div className="flex justify-between items-start mb-4">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center shrink-0">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-slate-900 text-lg">Don Alfonso (71 años)</h4>
+                  <p className="text-xs text-slate-500 mt-1">Comerciante tradicional - La Magnolia, Medellín</p>
+                </div>
+              </div>
+              <span className="bg-purple-50 text-purple-700 text-xs font-bold px-3 py-1 rounded-full text-center leading-tight">
+                Comerciante<br />de Oficios
+              </span>
+            </div>
+            <p className="text-slate-600 text-sm italic leading-relaxed pl-4 border-l-2 border-slate-200">
+              "Llevo 40 años arreglando sofas y muebles en esta esquina. No sé mucho de redes sociales, pero mis clientes de toda la vida me traen a los más jóvenes."
+            </p>
+          </div>
+
+          {/* Yurani */}
+          <div className="border border-slate-100 rounded-3xl p-6 shadow-sm bg-white hover:border-slate-200 transition-colors">
+            <div className="flex justify-between items-start mb-4">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center shrink-0">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-slate-900 text-lg">Yurani (29 años)</h4>
+                  <p className="text-xs text-slate-500 mt-1">Venta de repostería - La Magnolia, Envigado</p>
+                </div>
+              </div>
+              <span className="bg-purple-50 text-purple-700 text-xs font-bold px-3 py-1 rounded-full text-center leading-tight">
+                Emprendedora<br />Migrante
+              </span>
+            </div>
+            <p className="text-slate-600 text-sm italic leading-relaxed pl-4 border-l-2 border-slate-200">
+              "Cuando llegué de Venezuela me daba miedo vender. Empecé acá en el barrio y hoy mis recetas y productos venezolanos se mueven no solo por Whatsapp si no que tambien viene por ellos."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Cards de personas con multimedia */}
       <div data-anime className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {personas.map((p, idx) => (
           <PersonaCard key={idx} {...p} />

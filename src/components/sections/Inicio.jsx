@@ -10,13 +10,13 @@ export default function Inicio({ setActiveTab }) {
         
         {/* COLUMNA IZQUIERDA: Textos */}
         <div className="p-8 lg:p-12 flex flex-col justify-center space-y-6">
-          <div className="inline-flex items-center gap-2 bg-teal-50 text-teal-800 px-3 py-1 rounded-full text-xs font-bold w-fit">
-            <span className="w-2 h-2 rounded-full bg-teal-500"></span>
+          <div className="inline-flex items-center gap-2 bg-purple-50 text-purple-800 px-3 py-1 rounded-full text-xs font-bold w-fit">
+            <span className="w-2 h-2 rounded-full bg-purple-500"></span>
             Proyecto Pedagógico Hábitat-TIC
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-black leading-tight text-slate-900">
-            Redefiniendo la <span className="text-teal-600 underline decoration-teal-300">Ciudad Inteligente</span>
+            Redefiniendo la <span className="text-purple-600 underline decoration-teal-300">Ciudad Inteligente</span>
           </h2>
           
           <div className="text-slate-600 space-y-4 text-base leading-relaxed">
@@ -32,19 +32,19 @@ export default function Inicio({ setActiveTab }) {
                   <p>
                     A través de observación territorial, entrevistas, registros audiovisuales y diálogo intergeneracional, presentamos una lectura crítica de lo que significa ser una “ciudad inteligente” en contextos vulnerables. La propuesta de la Red de Economía Local Inteligente se plantea como acción solidaria: visibilizar saberes, potenciar prácticas económicas barriales y cerrar brechas digitales.
                   </p>
-                  <button onClick={() => setExpanded(false)} className="mt-2 text-sm text-teal-600 font-bold underline hover:text-teal-800">Ver menos</button>
+                  <button onClick={() => setExpanded(false)} className="mt-2 text-sm text-purple-600 font-bold underline hover:text-purple-800">Ver menos</button>
                 </>
               ) : (
                 <>
                   <p>
                     Las llamadas ciudades inteligentes suelen definirse desde la infraestructura tecnológica y la conectividad global. Sin embargo, nuestra experiencia en el barrio La Magnolia (Envigado) nos invita a repensar este concepto desde abajo, desde la vida cotidiana y las prácticas comunitarias que sostienen la economía popular...
-                    <button onClick={() => setExpanded(true)} className="ml-2 text-sm text-teal-600 font-bold underline hover:text-teal-800">Ver más</button>
+                    <button onClick={() => setExpanded(true)} className="ml-2 text-sm text-purple-600 font-bold underline hover:text-purple-800">Ver más</button>
                   </p>
                 </>
               )}
             </div>
 
-            <p className="bg-slate-50 p-4 rounded-xl border-l-4 border-teal-600 text-slate-700 font-medium">
+            <p className="bg-slate-50 p-4 rounded-xl border-l-4 border-purple-600 text-slate-700 font-medium">
               Este espacio digital está organizado en siete secciones 
               —Territorio, Observación, Análisis, Propuesta, Saberes, Vulnerabilidades y Reflexión— que integran evidencias, voces y aprendizajes. El objetivo es resignificar la idea de ciudad inteligente, pensándola desde y para la gente, como un proyecto colectivo que combina lo tecnológico con lo comunitario.
             </p>
@@ -53,7 +53,7 @@ export default function Inicio({ setActiveTab }) {
           <div className="pt-4 flex gap-3">
             <button 
               onClick={() => typeof setActiveTab === 'function' && setActiveTab('territorio')} 
-              className="bg-teal-700 text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 hover:bg-teal-800 transition-colors shadow-lg shadow-teal-700/30"
+              className="bg-purple-700 text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 hover:bg-purple-800 transition-colors shadow-lg shadow-purple-700/30"
             >
               Comenzar Recorrido <span aria-hidden="true">→</span>
             </button>

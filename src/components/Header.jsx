@@ -4,7 +4,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-teal-700 font-semibold">
+            <p className="text-xs uppercase tracking-[0.2em] text-purple-700 font-semibold">
               Proyecto Pedagógico Hábitat-TIC
             </p>
             <h1 className="mt-2 text-3xl font-black text-slate-900">

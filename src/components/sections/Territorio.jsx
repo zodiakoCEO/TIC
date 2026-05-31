@@ -21,8 +21,8 @@ export default function Territorio() {
         
         {/* Encabezado */}
         <div className="max-w-3xl mb-10">
-          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-bold w-fit mb-4">
-            <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+          <div className="inline-flex items-center gap-2 bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-xs font-bold w-fit mb-4">
+            <span className="w-2 h-2 rounded-full bg-purple-500"></span>
             Observación
           </div>
           <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-4">
@@ -75,18 +75,18 @@ export default function Territorio() {
 
         {/* Nuevos Checkmarks */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12" data-anime>
-          <div className="flex items-center gap-3 p-4 bg-emerald-50 border border-emerald-100 rounded-2xl">
-            <div className="bg-emerald-500 rounded-full p-1 text-white">
+          <div className="flex items-center gap-3 p-4 bg-purple-50 border border-emerald-100 rounded-2xl">
+            <div className="bg-purple-500 rounded-full p-1 text-white">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
             </div>
-            <span className="font-semibold text-emerald-900">Integración con el entorno geográfico</span>
+            <span className="font-semibold text-purple-900">Integración con el entorno geográfico</span>
           </div>
           
-          <div className="flex items-center gap-3 p-4 bg-emerald-50 border border-emerald-100 rounded-2xl">
-            <div className="bg-emerald-500 rounded-full p-1 text-white">
+          <div className="flex items-center gap-3 p-4 bg-purple-50 border border-emerald-100 rounded-2xl">
+            <div className="bg-purple-500 rounded-full p-1 text-white">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
             </div>
-            <span className="font-semibold text-emerald-900">Potenciación de la vida barrial</span>
+            <span className="font-semibold text-purple-900">Potenciación de la vida barrial</span>
           </div>
         </div>
 
