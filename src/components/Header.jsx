@@ -4,17 +4,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-purple-700 font-semibold">
-              Proyecto Pedagógico Hábitat-TIC
-            </p>
-            <h1 className="mt-2 text-3xl font-black text-slate-900">
-              Micrositio de investigación y circulación territorial
+            <h1 className="mt-2 text-6xl font-black text-purple-700 leading-tight">
+              Red de Economía Local Inteligente
             </h1>
-            <p className="mt-2 text-sm text-slate-600 max-w-2xl">
+            <p className="mt-2 text-lg text-slate-900 max-w-4xl">
               Un recorrido por territorio, observación, análisis, propuestas y saberes de la economía popular.
             </p>
           </div>
-          <div className="text-sm text-slate-500">
+          <div className="text-sm text-slate-500 whitespace-nowrap">
             Creado por DIANA ARTEMISA ARBELAEZ ARBELAEZ
           </div>
         </div>

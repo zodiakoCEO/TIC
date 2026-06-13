@@ -1,6 +1,8 @@
 import { useRef } from 'react';
 import useAnimeReveal from '../../hooks/useAnimeReveal';
 import Unknown from '../../../public/Unknown.jpg';
+import alfonso from '../../../public/alfonso.jpeg';
+import yurani from '../../../public/yurani.jpeg';
 
 export default function Analisis() {
   const container = useRef(null);
@@ -85,78 +87,6 @@ export default function Analisis() {
             <div className="bg-purple-50 p-6 rounded-3xl border border-purple-100">
               <p className="text-purple-900 text-sm italic font-medium leading-relaxed">
                 "Las ciudades inteligentes requieren herramientas accesibles para la ciudadanía, no solo sensores y datos".
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <hr className="border-slate-100" />
-
-      {/* =========================================
-          BLOQUE 2: SABERES AUTÓCTONOS
-          ========================================= */}
-      <div className="space-y-6" data-anime>
-        <div className="flex items-start gap-4">
-          <div className="bg-purple-50 p-3 rounded-2xl text-purple-700 shrink-0">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold text-slate-900">Saberes Autóctonos e Intergeneracionalidad</h2>
-            <p className="text-slate-600 mt-2 leading-relaxed max-w-4xl">
-              Dignificamos el conocimiento empírico de comerciantes locales, migrantes y líderes comunitarios. Creemos firmemente que la sabiduría barrial es un motor económico. El conocimiento no es solo académico; se vive en el asfalto, las recetas, los oficios tradicionales y la resiliencia intergeneracional.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-8">
-          <h3 className="font-bold flex items-center gap-2 text-slate-900 mb-6">
-            <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-            </svg>
-            Voces del Territorio: Diálogo de Saberes
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="border border-slate-100 rounded-3xl p-6 shadow-sm bg-white">
-              <div className="flex justify-between items-start mb-4">
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 text-lg">Don Alfonso (71 años)</h4>
-                    <p className="text-xs text-slate-500 mt-1">Comerciante tradicional - La Magnolia, Medellín</p>
-                  </div>
-                </div>
-                <span className="bg-purple-50 text-purple-700 text-xs font-bold px-3 py-1 rounded-full text-center leading-tight">
-                  Comerciante<br/>de Oficios
-                </span>
-              </div>
-              <p className="text-slate-600 text-sm italic">
-                "Llevo 40 años arreglando sofas y muebles en esta esquina. No sé mucho de redes sociales, pero mis clientes de toda la vida me traen a los más jóvenes."
-              </p>
-            </div>
-
-            <div className="border border-slate-100 rounded-3xl p-6 shadow-sm bg-white">
-              <div className="flex justify-between items-start mb-4">
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 text-lg">Yurani (29 años)</h4>
-                    <p className="text-xs text-slate-500 mt-1">Venta de repostería - La Magnolia, Envigado</p>
-                  </div>
-                </div>
-                <span className="bg-purple-50 text-purple-700 text-xs font-bold px-3 py-1 rounded-full text-center leading-tight">
-                  Emprendedora<br/>Migrante
-                </span>
-              </div>
-              <p className="text-slate-600 text-sm italic">
-                "Cuando llegué de Venezuela me daba miedo vender. Empecé en la quebrada La Ayurá y hoy mis postres se mueven todos por grupos de WhatsApp."
               </p>
             </div>
           </div>
@@ -316,7 +246,7 @@ export default function Analisis() {
           </div>
 
           <div className="bg-purple-50 rounded-2xl p-6 border border-purple-200 flex gap-4 items-start">
-            <span className="text-2xl mt-1"></span>
+            <span className="text-2xl mt-1">📌</span>
             <p className="text-sm text-purple-900 font-medium leading-relaxed">
               <strong className="font-bold">Síntesis:</strong> Caicedo Plúa & Amaya Fernández (2022) nos recuerdan que la ciudad inteligente no es un mero producto tecnológico o de mercado, sino un proyecto social e inclusivo. La inteligencia urbana se construye desde la participación ciudadana, la equidad digital y la gobernanza inclusiva. Tu proyecto se convierte en un ejemplo aplicado de esta perspectiva, al demostrar que la verdadera "smart city" se piensa y se estructura desde abajo, con la gente y para la gente.
             </p>

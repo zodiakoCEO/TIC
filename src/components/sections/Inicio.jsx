@@ -24,20 +24,20 @@ export default function Inicio({ setActiveTab }) {
               {expanded ? (
                 <>
                   <p>
-                    Las llamadas ciudades inteligentes suelen definirse desde la infraestructura tecnológica y la conectividad global. Sin embargo, nuestra experiencia en el barrio La Magnolia (Envigado) nos invita a repensar este concepto desde abajo, desde la vida cotidiana y las prácticas comunitarias que sostienen la economía popular.
+                    Las ciudades inteligentes suelen definirse por infraestructura tecnológica y conectividad global. Sin embargo, la experiencia en La Magnolia (Envigado) muestra que la verdadera inteligencia urbana surge de la vida cotidiana y de las prácticas comunitarias que sostienen la economía popular.
                   </p>
                   <p>
-                    Este micrositio nace como parte del Proyecto Pedagógico Hábitat‑TIC, y busca mostrar cómo las Tecnologías de la Información y la Comunicación (TIC) pueden convertirse en herramientas de apropiación social del conocimiento, fortaleciendo la soberanía alimentaria y comercial de las familias. No se trata de tecnología para el consumo, sino de tecnología como puente pedagógico que une saberes locales con dinámicas urbanas contemporáneas.
+                    La inteligencia de la ciudad no se mide solo en sensores o plataformas digitales, sino en la capacidad de las comunidades para sostener la vida, compartir saberes y construir redes de apoyo mutuo. Esta inteligencia comunitaria, sumada al uso de las TIC, puede ser aún más potente, utilizándolas como herramientas de inclusión, visibilización y fortalecimiento de la soberanía alimentaria y comercial.
                   </p>
                   <p>
-                    A través de observación territorial, entrevistas, registros audiovisuales y diálogo intergeneracional, presentamos una lectura crítica de lo que significa ser una “ciudad inteligente” en contextos vulnerables. La propuesta de la Red de Economía Local Inteligente se plantea como acción solidaria: visibilizar saberes, potenciar prácticas económicas barriales y cerrar brechas digitales.
+                    Este micrositio, parte del Proyecto Pedagógico Hábitat‑TIC, propone una lectura crítica de lo que significa ser una ciudad inteligente en contextos vulnerables. La Red de Economía Local Inteligente se plantea como acción solidaria: visibilizar saberes, potenciar prácticas barriales y cerrar brechas digitales.
                   </p>
                   <button onClick={() => setExpanded(false)} className="mt-2 text-sm text-purple-600 font-bold underline hover:text-purple-800">Ver menos</button>
                 </>
               ) : (
                 <>
                   <p>
-                    Las llamadas ciudades inteligentes suelen definirse desde la infraestructura tecnológica y la conectividad global. Sin embargo, nuestra experiencia en el barrio La Magnolia (Envigado) nos invita a repensar este concepto desde abajo, desde la vida cotidiana y las prácticas comunitarias que sostienen la economía popular...
+                    Las ciudades inteligentes suelen definirse por infraestructura tecnológica y conectividad global. Sin embargo, la experiencia en La Magnolia (Envigado) muestra que la verdadera inteligencia urbana surge de la vida cotidiana y de las prácticas comunitarias que sostienen la economía popular...
                     <button onClick={() => setExpanded(true)} className="ml-2 text-sm text-purple-600 font-bold underline hover:text-purple-800">Ver más</button>
                   </p>
                 </>

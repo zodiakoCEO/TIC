@@ -7,7 +7,10 @@ import biometria from '../../assets/biometria.png';
 import ayudar from '../../assets/ayudar.png';
 import conversacion from '../../assets/conversacion.png';
 import crear from '../../assets/crear.png';
-
+import Janeth from '../../../public/Janeth.jpeg';
+import alfonso from '../../../public/alfonso.jpeg';
+import yurani from '../../../public/yurani.jpeg';
+import alex from '../../../public/alex.jpeg';
 // Componente de reproductor de audio
 function AudioPlayer({ src, label }) {
   const audioRef = useRef(null);
@@ -209,47 +212,77 @@ export default function Saberes() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Don Alfonso */}
           <div className="border border-slate-100 rounded-3xl p-6 shadow-sm bg-white hover:border-slate-200 transition-colors">
+            <div className="aspect-square w-full rounded-2xl overflow-hidden mb-5 border border-slate-100">
+              <img src={alfonso} alt="Retrato de Don Alfonso" className="w-full h-full object-cover object-center" />
+            </div>
             <div className="flex justify-between items-start mb-4">
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center shrink-0">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-bold text-slate-900 text-lg">Don Alfonso (71 años)</h4>
-                  <p className="text-xs text-slate-500 mt-1">Comerciante tradicional - La Magnolia, Medellín</p>
-                </div>
+              <div>
+                <h4 className="font-bold text-slate-900 text-lg">Don Alfonso (71 años)</h4>
+                <p className="text-xs text-slate-500 mt-1">Comerciante tradicional - La Magnolia, Medellín</p>
               </div>
               <span className="bg-purple-50 text-purple-700 text-xs font-bold px-3 py-1 rounded-full text-center leading-tight">
-                Comerciante<br />de Oficios
+                Comerciante de oficio
               </span>
             </div>
             <p className="text-slate-600 text-sm italic leading-relaxed pl-4 border-l-2 border-slate-200">
-              "Llevo 40 años arreglando sofas y muebles en esta esquina. No sé mucho de redes sociales, pero mis clientes de toda la vida me traen a los más jóvenes."
+              "Llevo 40 años arreglando sofás y muebles en esta esquina. No sé mucho de redes sociales, pero mis clientes de toda la vida me traen a los más jóvenes."
             </p>
           </div>
 
           {/* Yurani */}
           <div className="border border-slate-100 rounded-3xl p-6 shadow-sm bg-white hover:border-slate-200 transition-colors">
+            <div className="aspect-square w-full rounded-2xl overflow-hidden mb-5 border border-slate-100">
+              <img src={yurani} alt="Retrato de Yurani" className="w-full h-full object-cover object-center" />
+            </div>
             <div className="flex justify-between items-start mb-4">
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center shrink-0">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-bold text-slate-900 text-lg">Yurani (29 años)</h4>
-                  <p className="text-xs text-slate-500 mt-1">Venta de repostería - La Magnolia, Envigado</p>
-                </div>
+              <div>
+                <h4 className="font-bold text-slate-900 text-lg">Yurani (29 años)</h4>
+                <p className="text-xs text-slate-500 mt-1">Venta de repostería - La Magnolia, Envigado</p>
               </div>
               <span className="bg-purple-50 text-purple-700 text-xs font-bold px-3 py-1 rounded-full text-center leading-tight">
-                Emprendedora<br />Migrante
+                Emprendedora migrante
               </span>
             </div>
             <p className="text-slate-600 text-sm italic leading-relaxed pl-4 border-l-2 border-slate-200">
-              "Cuando llegué de Venezuela me daba miedo vender. Empecé acá en el barrio y hoy mis recetas y productos venezolanos se mueven no solo por Whatsapp si no que tambien viene por ellos."
+              "Cuando llegué de Venezuela me daba miedo vender. Empecé acá en el barrio y hoy mis recetas y productos venezolanos se mueven no solo por WhatsApp sino que también vienen por ellos."
+            </p>
+          </div>
+
+          {/* Janeth */}
+          <div className="border border-slate-100 rounded-3xl p-6 shadow-sm bg-white hover:border-slate-200 transition-colors">
+            <div className="aspect-square w-full rounded-2xl overflow-hidden mb-5 border border-slate-100">
+              <img src={Janeth} alt="Retrato de Janeth Grisales" className="w-full h-full object-cover object-center" />
+            </div>
+            <div className="flex justify-between items-start mb-4">
+              <div>
+                <h4 className="font-bold text-slate-900 text-lg">Janeth Grisales (52 años)</h4>
+                <p className="text-xs text-slate-500 mt-1">Venta de morcilla y chorizos caseros – La Magnolia, Envigado</p>
+              </div>
+              <span className="bg-purple-50 text-purple-700 text-xs font-bold px-3 py-1 rounded-full text-center leading-tight">
+                Comerciante de tradición gastronómica
+              </span>
+            </div>
+            <p className="text-slate-600 text-sm italic leading-relaxed pl-4 border-l-2 border-slate-200">
+              "Desde hace más de veinte años preparo morcilla y chorizos en la cocina de mi casa. La receta es de mi mamá, y aquí en el barrio me conocen porque siempre vendo fresco y con confianza. Al principio todo era de voz en voz, pero ahora uso WhatsApp para recibir pedidos y hasta me pagan por transferencias electrónicas, lo que me facilita mucho. Sin embargo, me gustaría aprender más de tecnología para mostrar mis productos a más personas y mejorar mis ventas. Yo sé que mi oficio es tradicional, pero también puede crecer si aprovecho esas herramientas digitales."
+            </p>
+          </div>
+
+          {/* Alex */}
+          <div className="border border-slate-100 rounded-3xl p-6 shadow-sm bg-white hover:border-slate-200 transition-colors">
+            <div className="aspect-square w-full rounded-2xl overflow-hidden mb-5 border border-slate-100">
+              <img src={alex} alt="Retrato de Alex" className="w-full h-full object-cover object-center" />
+            </div>
+            <div className="flex justify-between items-start mb-4">
+              <div>
+                <h4 className="font-bold text-slate-900 text-lg">Alex (29 años)</h4>
+                <p className="text-xs text-slate-500 mt-1">Mecánico de motos – La Magnolia, Envigado</p>
+              </div>
+              <span className="bg-purple-50 text-purple-700 text-xs font-bold px-3 py-1 rounded-full text-center leading-tight">
+                Joven emprendedor de oficios técnicos
+              </span>
+            </div>
+            <p className="text-slate-600 text-sm italic leading-relaxed pl-4 border-l-2 border-slate-200">
+              "Siempre me gustaron las motos, y aprendí a arreglarlas viendo y practicando con amigos. Hoy tengo mi propio taller en la esquina de mi casa, sencillo pero lleno de trabajo. Los vecinos confían en mí porque saben que les respondo rápido y con precios justos. Me contacto con clientes por WhatsApp, y algunos ya me pagan por transferencia bancaria, lo que me ayuda a organizar mejor el negocio. Quiero aprender más sobre tecnología para mostrar mis servicios en redes sociales y llegar a más personas. Creo que los jóvenes del barrio podemos crecer si combinamos nuestros oficios con las herramientas digitales."
             </p>
           </div>
         </div>

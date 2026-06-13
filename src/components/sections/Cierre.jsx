@@ -6,66 +6,40 @@ export default function Cierre() {
   useAnimeReveal(container);
 
   return (
-    <div ref={container} className="bg-white p-8 lg:p-10 rounded-[32px] shadow-sm border border-slate-100 animate-fadeIn space-y-8" data-anime>
-      
-      {/* 1. Encabezado */}
-      <div data-anime>
-        <h2 className="text-3xl font-black text-slate-900">Cierre del Recorrido</h2>
-        <p className="text-slate-600 text-lg mt-4 max-w-2xl">
-          Sintetizamos los aprendizajes clave para seguir construyendo ciudades más justas, 
-          conectadas y respetuosas de los saberes locales en La Magnolia.
-        </p>
+    <div className="space-y-6">
+      <div className="border-b border-slate-100 pb-6">
+        <div className="flex items-center gap-3 mb-2">
+          <span className="w-3 h-3 rounded-full bg-purple-600 animate-pulse"></span>
+          <span className="text-xs font-bold uppercase tracking-widest text-purple-600">Cierre y Reflexión</span>
+        </div>
+        <h2 className="text-3xl font-black text-slate-900">Cierre</h2>
       </div>
 
-      {/* 2. Grid de Reflexiones */}
-      <div className="grid gap-6 lg:grid-cols-2" data-anime>
-        <div className="rounded-[32px] bg-slate-50 p-8 border border-slate-100">
-          <h3 className="font-bold text-slate-900 mb-3 text-lg">Caminos posibles</h3>
-          <p className="text-slate-600 text-sm leading-relaxed">
-            Fortalecer la participación ciudadana y apoyar iniciativas de economía local 
-            que ya tienen raíces en los barrios es el primer paso hacia una verdadera sostenibilidad digital.
-          </p>
-        </div>
-        <div className="rounded-[32px] bg-slate-50 p-8 border border-slate-100">
-          <h3 className="font-bold text-slate-900 mb-3 text-lg">Transformación</h3>
-          <p className="text-slate-600 text-sm leading-relaxed">
-            Las herramientas digitales funcionan mejor cuando son adaptadas por y para quienes habitan 
-            el territorio, evitando la imposición tecnológica externa.
-          </p>
-        </div>
-      </div>
-
-      {/* 3. Imagen de contexto */}
-      <div className="rounded-[32px] overflow-hidden border border-slate-100 shadow-sm" data-anime>
-        <img
-          src=""
-          alt="Comunidad celebrando un proyecto local"
-          className="h-72 w-full object-cover"
-        />
-      </div>
-
-      {/* 4. Footer de Cierre (Invertido a estilo Teal) */}
-      <footer className="bg-purple-700 rounded-[32px] p-8 text-white grid grid-cols-1 md:grid-cols-2 gap-8 items-center" data-anime>
-        <div className="space-y-2">
-          <h4 className="font-black text-xl">Visión de Futuro</h4>
-          <p className="text-purple-100 text-sm">
-            Documentar y replicar las prácticas que ya funcionan. Cada iniciativa local aporta a una ciudad más equitativa cuando comparte saberes.
-          </p>
-        </div>
-        
-        <div className="flex justify-end gap-6 border-t border-purple-600 pt-6 md:border-t-0 md:pt-0">
-          <div className="text-center">
-            <span className="block text-purple-200 font-bold text-xs uppercase tracking-wider">Estado</span>
-            <span className="block font-semibold mt-1">En Crecimiento</span>
+      <div
+        ref={container}
+        className="bg-purple-700 text-white rounded-[32px] p-8 lg:p-10 shadow-xl animate-fadeIn"
+        data-anime
+      >
+        <div className="max-w-6xl mx-auto flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl lg:text-4xl font-black">Visión de Futuro</h2>
+            <p className="mt-4 text-base lg:text-lg text-purple-100 leading-relaxed">
+              Documentar y replicar las prácticas que ya funcionan. Cada iniciativa local aporta a una ciudad más equitativa cuando comparte sabereres.
+            </p>
           </div>
-          <div className="w-px bg-purple-600 h-10"></div>
-          <div className="text-center">
-            <span className="block text-purple-200 font-bold text-xs uppercase tracking-wider">Objetivo</span>
-            <span className="block font-semibold mt-1">Territorial</span>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm lg:text-base">
+            <div className="rounded-3xl bg-purple-800/80 p-5 border border-purple-600">
+              <span className="text-xs uppercase tracking-[0.25em] text-purple-200">Estado</span>
+              <p className="mt-3 font-bold text-white">En Crecimiento</p>
+            </div>
+            <div className="rounded-3xl bg-purple-800/80 p-5 border border-purple-600">
+              <span className="text-xs uppercase tracking-[0.25em] text-purple-200">Objetivo</span>
+              <p className="mt-3 font-bold text-white">Territorial</p>
+            </div>
           </div>
         </div>
-      </footer>
-      
+      </div>
     </div>
   );
 }

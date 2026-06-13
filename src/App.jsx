@@ -69,13 +69,16 @@ function App() {
         {sections.map((section) => {
           const SectionComponent = section.component;
           const isInicio = section.id === 'inicio';
+          const sectionClassName = section.id === 'cierre'
+            ? 'max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8 flex flex-col'
+            : 'max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 min-h-screen flex flex-col justify-center';
           
           return (
             <section
               key={section.id}
               ref={(el) => { sectionRefs.current[section.id] = el; }}
               id={section.id}
-              className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 min-h-screen flex flex-col justify-center"
+              className={sectionClassName}
             >
               {isInicio ? (
                 <SectionComponent setActiveTab={scrollToSection} />
