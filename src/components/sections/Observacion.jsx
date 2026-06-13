@@ -1,5 +1,11 @@
 import { useRef } from 'react';
 import useAnimeReveal from '../../hooks/useAnimeReveal';
+import R1 from '../../../public/R1.jpeg';
+import R2 from '../../../public/R2.jpeg';
+import R3 from '../../../public/R3.jpeg';
+import R4 from '../../../public/R4.jpeg';
+import R5 from '../../../public/R5.jpeg';
+import R6 from '../../../public/R6.jpeg';
 
 export default function Observacion() {
   const container = useRef(null);
@@ -34,15 +40,20 @@ export default function Observacion() {
         <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
           <div>
             <div className="flex justify-between items-start mb-4">
-              <span className="text-xs text-slate-500 font-medium">Envigado, Quebrada La Ayurá</span>
+              <span className="text-xs text-slate-500 font-medium">La Magnolia, Envigado</span>
               <span className="text-[10px] font-bold text-purple-700 bg-purple-50 px-2 py-1 rounded-md">REGISTRO #01</span>
             </div>
-            <h4 className="font-bold text-lg mb-3">"Las Chasas de la Ayurá"</h4>
+            <h4 className="font-bold text-lg mb-3">“Mascotas y economía afectiva”</h4>
             <p className="text-sm text-slate-600 leading-relaxed italic">
-              "Observamos tres puestos móviles de venta de jugos y dulces en el corredor de ciclorruta. Sus dueños son una pareja migrante venezolana y un adulto mayor de Envigado..."
+             En una vivienda adaptada como pequeño local funciona Ruquita Pets, una tienda de alimentos y accesorios para mascotas. La fachada conserva la estética doméstica, pero un letrero pintado y bolsas de alimento en la ventana anuncian la actividad comercial. La dueña, vecina del sector, atiende personalmente y ofrece confianza a quienes buscan productos para sus animales. Este negocio muestra cómo la economía barrial se diversifica más allá de la alimentación humana, integrando el cuidado de los animales como parte de la vida cotidiana.
+            </p>
+            <p className="text-sm text-slate-500 leading-relaxed mt-4">
+              Nota pedagógica: La apropiación del espacio doméstico para el comercio refleja resiliencia y creatividad frente a la falta de locales formales.
             </p>
           </div>
-          <a href="#" className="text-purple-700 text-sm font-semibold mt-4 hover:underline">Ver foto</a>
+          <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200">
+            <img src={R1} alt="R1 Mascotas y economía afectiva" className="w-full h-48 object-cover" />
+          </div>
         </div>
 
         {/* Tarjeta 2 */}
@@ -52,27 +63,97 @@ export default function Observacion() {
               <span className="text-xs text-slate-500 font-medium">La Magnolia, Envigado</span>
               <span className="text-[10px] font-bold text-purple-700 bg-purple-50 px-2 py-1 rounded-md">REGISTRO #02</span>
             </div>
-            <h4 className="font-bold text-lg mb-3">Economía y Redes de Cuidado</h4>
+            <h4 className="font-bold text-lg mb-3">"Tamales desde la ventana"</h4>
             <p className="text-sm text-slate-600 leading-relaxed italic">
-              "En la zona comercial de La Magnolia, observamos cómo las redes de cuidado local gestionan la alimentación de los vecinos. Existe un fuerte intercambio pedagógico entre comerciantes..."
+              En la fachada de un edificio residencial cuelga un aviso sencillo: “Deliciosos Tamales Caseros”. No hay vitrina ni mostrador, solo la ventana y la voz de la vecina que ofrece el producto. Los tamales se preparan en la cocina de la casa y se venden directamente a transeúntes y vecinos. Este gesto cotidiano convierte la vivienda en un punto de encuentro gastronómico, donde la tradición culinaria se transforma en sustento económico.
+            </p>
+            <p className="text-sm text-slate-500 leading-relaxed mt-4">
+              Nota pedagógica: La economía popular se sostiene en prácticas familiares que, aunque informales, generan vínculos de confianza y circulación de saberes tradicionales.
             </p>
           </div>
-          <a href="#" className="text-purple-700 text-sm font-semibold mt-4 hover:underline">Ver foto</a>
+          <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200">
+            <img src={R2} alt="R2 Tamales desde la ventana" className="w-full h-48 object-cover" />
+          </div>
         </div>
 
         {/* Tarjeta 3 */}
         <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
           <div>
             <div className="flex justify-between items-start mb-4">
-              <span className="text-xs text-slate-500 font-medium">La Magnolia - Puntos Críticos</span>
+              <span className="text-xs text-slate-500 font-medium">La Magnolia, Envigado</span>
               <span className="text-[10px] font-bold text-purple-700 bg-purple-50 px-2 py-1 rounded-md">REGISTRO #03</span>
             </div>
-            <h4 className="font-bold text-lg mb-3">Espacio Público y Convivencia</h4>
+            <h4 className="font-bold text-lg mb-3">"Uniformes en la sala"</h4>
             <p className="text-sm text-slate-600 leading-relaxed italic">
-              "La calle se convierte en el principal espacio de encuentro social. Identificamos dinámicas donde el comercio local fomenta la solidaridad vecinal para el cuidado mutuo de los espacios..."
+              En la planta baja de una casa de fachada en piedra funciona Ola-g Uniformes Cheapers. El espacio doméstico se adaptó como tienda: detrás de una reja metálica cuelgan prendas blancas, listas para la venta. La familia que habita la vivienda atiende el negocio, combinando la vida cotidiana con la actividad comercial. Este ejemplo muestra cómo las casas se convierten en microempresas, integrando producción y venta en el mismo lugar.
+            </p>
+            <p className="text-sm text-slate-500 leading-relaxed mt-4">
+              Nota pedagógica: La frontera entre hogar y comercio se difumina, revelando la capacidad de las familias para generar ingresos sin necesidad de infraestructura externa.
             </p>
           </div>
-          <a href="#" className="text-purple-700 text-sm font-semibold mt-4 hover:underline">Ver foto</a>
+          <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200">
+            <img src={R3} alt="R3 Uniformes en la sala" className="w-full h-48 object-cover" />
+          </div>
+        </div>
+
+        {/* Tarjeta 4 */}
+        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div className="flex justify-between items-start mb-4">
+              <span className="text-xs text-slate-500 font-medium">La Magnolia, Envigado</span>
+              <span className="text-[10px] font-bold text-purple-700 bg-purple-50 px-2 py-1 rounded-md">REGISTRO #04</span>
+            </div>
+            <h4 className="font-bold text-lg mb-3">"La morcilla de la esquina"</h4>
+            <p className="text-sm text-slate-600 leading-relaxed italic">
+              En una esquina del barrio, un letrero sencillo anuncia la venta de morcilla casera. No hay vitrina ni local formal, solo la fachada de la vivienda y el aviso con un número de contacto. El producto se prepara en la cocina familiar y se ofrece directamente a vecinos y transeúntes. Este tipo de comercio muestra cómo la tradición culinaria se convierte en sustento económico y en vínculo social, pues quienes compran lo hacen por confianza y cercanía.
+            </p>
+            <p className="text-sm text-slate-500 leading-relaxed mt-4">
+              Nota pedagógica: La economía popular se sostiene en la transmisión de saberes gastronómicos y en la confianza barrial, más allá de la formalidad comercial.
+            </p>
+          </div>
+          <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200">
+            <img src={R4} alt="R4 La morcilla de la esquina" className="w-full h-48 object-cover" />
+          </div>
+        </div>
+
+        {/* Tarjeta 5 */}
+        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div className="flex justify-between items-start mb-4">
+              <span className="text-xs text-slate-500 font-medium">La Magnolia, Envigado</span>
+              <span className="text-[10px] font-bold text-purple-700 bg-purple-50 px-2 py-1 rounded-md">REGISTRO #05</span>
+            </div>
+            <h4 className="font-bold text-lg mb-3">"Helados caseros en la sala"</h4>
+            <p className="text-sm text-slate-600 leading-relaxed italic">
+              En la entrada de una vivienda se improvisó un pequeño mostrador donde una familia ofrece helados caseros. Los sabores varían según la temporada y los ingredientes disponibles, preparados en la misma cocina del hogar. Los vecinos se acercan a comprar en la tarde, convirtiendo la casa en un punto de encuentro refrescante y cotidiano. Este emprendimiento refleja cómo la creatividad culinaria se transforma en sustento económico, aprovechando la confianza barrial y el tránsito peatonal.
+            </p>
+            <p className="text-sm text-slate-500 leading-relaxed mt-4">
+              Nota pedagógica: La economía popular se reinventa con productos sencillos y accesibles, mostrando cómo las familias adaptan sus espacios domésticos para generar ingresos y fortalecer la vida comunitaria.
+            </p>
+          </div>
+          <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200">
+            <img src={R5} alt="R5 Helados caseros en la sala" className="w-full h-48 object-cover" />
+          </div>
+        </div>
+
+        {/* Tarjeta 6 */}
+        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div className="flex justify-between items-start mb-4">
+              <span className="text-xs text-slate-500 font-medium">La Magnolia, Envigado</span>
+              <span className="text-[10px] font-bold text-purple-700 bg-purple-50 px-2 py-1 rounded-md">REGISTRO #06</span>
+            </div>
+            <h4 className="font-bold text-lg mb-3">"El taller de motos de Alex"</h4>
+            <p className="text-sm text-slate-600 leading-relaxed italic">
+              En la esquina de una vivienda adaptada funciona el pequeño taller de Alex, un joven del barrio que ofrece reparación de motos. El espacio es sencillo: una puerta abierta, herramientas básicas y la presencia constante de vecinos que llegan con sus motocicletas. Alex aprendió el oficio de manera empírica y lo ha convertido en sustento económico, atendiendo con cercanía y confianza a quienes lo conocen. Su taller refleja cómo los jóvenes del barrio encuentran en la economía popular una oportunidad para emprender desde sus propios saberes.
+            </p>
+            <p className="text-sm text-slate-500 leading-relaxed mt-4">
+              Nota pedagógica: La economía barrial también se sostiene en oficios técnicos, donde la juventud aporta innovación y resiliencia, adaptando espacios domésticos para ofrecer servicios esenciales.
+            </p>
+          </div>
+          <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200">
+            <img src={R6} alt="R6 El taller de motos de Alex" className="w-full h-48 object-cover" />
+          </div>
         </div>
 
       </div>

@@ -9,7 +9,7 @@ const limitesMagnolia = [
   { lat: 6.1761, lng: -75.5810 },
   { lat: 6.1763, lng: -75.5796 }, 
   // 3. Borde Este
-  { lat: 6.1742, lng: -75.5809 },
+  { lat: 6.1742, lng: -75.58009 },
   { lat: 6.1725, lng: -75.5798 },
   // 4. Esquina Sureste
   { lat: 6.1712, lng: -75.5796 },
@@ -25,13 +25,23 @@ const limitesMagnolia = [
 
 const emprendimientosIniciales = [
   // Zona noreste
-  { nombre: 'Obleas y solteritas caseras', lat: 6.1756916, lng: -75.5800201 },
+  { nombre: 'Obleas y solteritas caseras', lat: 6.1753916, lng: -75.5800201, whatsapp: '+57 3012848076' },
   // Zona sureste
-  { nombre: 'Saxofon en vivo', lat: 6.1716832, lng: -75.5804983 },
+  { nombre: 'Saxofon en vivo', lat: 6.1716832, lng: -75.5804983, whatsapp: '+57 3002757137' },
   // Zona central/oeste
-  { nombre: 'Recetas y productos Venezolanos', lat: 6.1735000, lng: -75.5825000 },
+  { nombre: 'Peluqueria Gladys Ramirez', lat: 6.1740356, lng: -75.5825058, whatsapp: '+57 320 345 6789' },
   // Zona suroeste
-  { nombre: 'Reparación y muebles', lat: 6.1705000, lng: -75.5815000 }
+  { nombre: 'Helados y cremas caseras', lat: 6.1732, lng: -75.5841, whatsapp: '+57 3195563036' },
+  // Zona noroeste
+  { nombre: 'Mueblería y Talabarteria de Don Jairo', lat: 6.1758675, lng: -75.5814222, whatsapp: '+57 301 567 8901' },
+  // Zona norte
+  { nombre: 'Confecciones de uniformes y chaquetas ', lat: 6.1754130, lng: -75.5835125, whatsapp: '+57 3103743949' },
+  // Zona este
+  { nombre: 'Tamales Caseritos', lat: 6.1709816, lng: -75.5837886, whatsapp: '+57 3217552436' },
+  // Zona este (repetido para mostrar cómo se ven dos emprendimientos cercanos)
+  { nombre: 'Morcilla y Chorizos Caseros', lat: 6.1712828, lng: -75.5833832, whatsapp: '+57 3145551057' },
+  // Puedes agregar más emprendimientos aquí siguiendo el mismo formato
+  { nombre: 'Peluqueria y comida para perros y gatos- Rocío Fuentes', lat: 6.1717622, lng: -75.5836016, whatsapp: '+57 6043866195' },
 ];
 
 export default function Map() {
@@ -69,25 +79,68 @@ export default function Map() {
       });
       poligonoBarrio.setMap(mapInstance.current);
 
-      const agregarMarcador = (lat, lng, nombre) => {
+      const modalContainer = document.createElement('div');
+      modalContainer.className = 'fixed inset-0 z-[9999] hidden flex items-center justify-center bg-slate-950/40 p-4';
+      modalContainer.innerHTML = `
+        <div class="max-w-sm w-full bg-white rounded-[24px] shadow-2xl overflow-hidden border border-slate-200">
+          <div class="flex items-center justify-between gap-3 p-5 border-b border-slate-200">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.2em] text-purple-700">Emprendimiento</p>
+              <h3 id="contact-name" class="text-xl font-black text-slate-900 mt-2 leading-tight"></h3>
+            </div>
+            <button id="contact-close" class="text-slate-500 hover:text-slate-900 text-2xl leading-none">&times;</button>
+          </div>
+          <div class="px-5 py-6 space-y-4">
+            <div class="rounded-2xl bg-slate-50 p-4">
+              <p class="text-[11px] text-slate-500 uppercase tracking-[0.18em] mb-2">WhatsApp</p>
+              <p id="contact-whatsapp" class="text-sm font-semibold text-slate-900"></p>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">Usa este número para hablar directamente con el emprendimiento.</p>
+          </div>
+          <div class="px-5 pb-5">
+            <button id="contact-close-bottom" class="w-full rounded-2xl bg-purple-600 text-white py-3 text-sm font-semibold hover:bg-purple-700 transition">Cerrar</button>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modalContainer);
+
+      const modalName = modalContainer.querySelector('#contact-name');
+      const modalWhatsapp = modalContainer.querySelector('#contact-whatsapp');
+      const contactClose = modalContainer.querySelector('#contact-close');
+      const contactCloseBottom = modalContainer.querySelector('#contact-close-bottom');
+
+      const openContactModal = (nombre, whatsapp) => {
+        modalName.textContent = nombre;
+        modalWhatsapp.textContent = whatsapp || 'No disponible';
+        modalContainer.classList.remove('hidden');
+      };
+
+      const closeContactModal = () => {
+        modalContainer.classList.add('hidden');
+      };
+
+      contactClose.addEventListener('click', closeContactModal);
+      contactCloseBottom.addEventListener('click', closeContactModal);
+
+      const agregarMarcador = (lat, lng, nombre, whatsapp) => {
         const etiquetaNaranja = document.createElement('div');
-        // Reduje un poco el padding izquierdo (pl-1) para que el icono se vea más pegado al borde
         etiquetaNaranja.className = 'bg-purple-600 text-white pl-1.5 pr-3 py-1 rounded-full font-bold text-xs shadow-lg border-2 border-white flex items-center gap-1.5 hover:scale-110 transition-transform cursor-pointer';
-        
-        // 2. Reemplazamos el span por la etiqueta <img> usando la variable importada
-        // Ajustamos con Tailwind: w-5 h-5 (tamaño) y object-contain (para que no se deforme)
         etiquetaNaranja.innerHTML = `<img src="/pin-history.svg" alt="Pin" class="w-5 h-5 object-contain drop-shadow-sm" /> <span>${nombre}</span>`;
 
-        new AdvancedMarkerElement({
+        const marcador = new AdvancedMarkerElement({
           map: mapInstance.current,
           position: { lat, lng },
           title: nombre,
           content: etiquetaNaranja,
         });
+
+        marcador.addListener('click', () => {
+          openContactModal(nombre, whatsapp);
+        });
       };
 
       emprendimientosIniciales.forEach(emp => {
-        agregarMarcador(emp.lat, emp.lng, emp.nombre);
+        agregarMarcador(emp.lat, emp.lng, emp.nombre, emp.whatsapp);
       });
 
       infoWindowRef.current = new InfoWindow();

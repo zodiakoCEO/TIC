@@ -246,7 +246,7 @@ export default function Analisis() {
           </div>
 
           <div className="bg-purple-50 rounded-2xl p-6 border border-purple-200 flex gap-4 items-start">
-            <span className="text-2xl mt-1">📌</span>
+            <span className="text-2xl mt-1"></span>
             <p className="text-sm text-purple-900 font-medium leading-relaxed">
               <strong className="font-bold">Síntesis:</strong> Caicedo Plúa & Amaya Fernández (2022) nos recuerdan que la ciudad inteligente no es un mero producto tecnológico o de mercado, sino un proyecto social e inclusivo. La inteligencia urbana se construye desde la participación ciudadana, la equidad digital y la gobernanza inclusiva. Tu proyecto se convierte en un ejemplo aplicado de esta perspectiva, al demostrar que la verdadera "smart city" se piensa y se estructura desde abajo, con la gente y para la gente.
             </p>

@@ -7,10 +7,10 @@ import biometria from '../../assets/biometria.png';
 import ayudar from '../../assets/ayudar.png';
 import conversacion from '../../assets/conversacion.png';
 import crear from '../../assets/crear.png';
-import Janeth from '../../../public/Janeth.jpeg';
-import alfonso from '../../../public/alfonso.jpeg';
-import yurani from '../../../public/yurani.jpeg';
-import alex from '../../../public/alex.jpeg';
+const Janeth = '/Janeth.jpeg';
+const alfonso = '/alfonso.jpeg';
+const yurani = '/yurani.jpeg';
+const alex = '/alex.jpeg';
 // Componente de reproductor de audio
 function AudioPlayer({ src, label }) {
   const audioRef = useRef(null);
@@ -133,7 +133,7 @@ export default function Saberes() {
   const personas = [
     {
       img: beatriz,
-      nombre: "Beatriz",
+      nombre: "Beatriz Arcila",
       edad: 60,
       rol: "Emprendedora",
       lugar: "La Magnolia, Envigado",

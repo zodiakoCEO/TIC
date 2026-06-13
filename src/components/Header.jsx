@@ -11,7 +11,7 @@ export default function Header() {
               Un recorrido por territorio, observación, análisis, propuestas y saberes de la economía popular.
             </p>
           </div>
-          <div className="text-sm text-slate-500 whitespace-nowrap">
+          <div className="text-sm text-slate-500 whitespace-nowrap overflow-x-auto">
             Creado por DIANA ARTEMISA ARBELAEZ ARBELAEZ
           </div>
         </div>
