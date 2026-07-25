@@ -3,7 +3,7 @@ import useAnimeReveal from '../../hooks/useAnimeReveal';
 import Unknown from '../../../public/Unknown.jpg';
 import alfonso from '../../../public/alfonso.jpeg';
 import yurani from '../../../public/yurani.jpeg';
-import comunidad3 from '../../../public/comunidad4.png';
+import principal1 from '../../../public/principal1.png';
 export default function Analisis() {
   const container = useRef(null);
   useAnimeReveal(container);
@@ -62,7 +62,7 @@ export default function Analisis() {
                 ))}
               </div>
               <p className="text-[11px] text-slate-500 italic leading-relaxed mt-4">
-                Tabla de indicadores de uso de apropiación digital, segun respuesta de algunos comerciantes del barrio La Magnolia, Envigado. Diseño de slider con apoyo de la IA Copilot
+                Tabla de indicadores de uso de apropiación digital, según respuesta de algunos comerciantes del barrio La Magnolia, en encuesta realizada durante trabajo de campo a 20 comerciantes formales, informales y que ofrecen productos y servicios desde casa. Barrio La Magnolia en Envigado. Diseño de slider con apoyo de la IA Copilot
               </p>
             </div>
 
@@ -87,7 +87,7 @@ export default function Analisis() {
           <div className="lg:col-span-5 flex flex-col gap-6">
             <div className="flex flex-col rounded-3xl border border-slate-100 bg-white min-h-[300px]">
               <img
-                src={comunidad3}
+                src={principal1}
                 alt="Reunión comunitaria para análisis urbano"
                 className="w-full h-64 md:h-72 object-cover object-center"
               />

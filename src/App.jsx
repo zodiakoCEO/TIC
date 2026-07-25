@@ -11,6 +11,7 @@ import Analisis from './components/sections/Analisis';
 import Propuesta from './components/sections/Propuesta';
 import Saberes from './components/sections/Saberes';
 import Vulnerabilidades from './components/sections/Vulnerabilidades';
+import LasTic from './components/sections/LasTic';
 import Reflexion from './components/sections/Reflexion';
 import Cierre from './components/sections/Cierre';
 
@@ -22,6 +23,7 @@ const sections = [
   { id: 'propuesta', label: 'Propuesta', component: Propuesta },
   { id: 'saberes', label: 'Saberes', component: Saberes },
   { id: 'vulnerabilidades', label: 'Vulnerabilidades', component: Vulnerabilidades },
+  { id: 'lastic', label: 'LAS TIC', component: LasTic },
   { id: 'reflexion', label: 'Reflexión', component: Reflexion },
   { id: 'cierre', label: 'Cierre', component: Cierre }
 ];

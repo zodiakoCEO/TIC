@@ -6,8 +6,8 @@ import R3 from '../../../public/R3.jpeg';
 import R4 from '../../../public/R4.jpeg';
 import R5 from '../../../public/R5.jpeg';
 import R6 from '../../../public/R6.jpeg';
-import OBS1 from '../../../public/imagen1.jpeg';
-import OBS2 from '../../../public/imagen2.jpeg';
+import OBS1 from '../../../public/comercio1.jpg';
+import OBS2 from '../../../public/comercio2.jpg';
 
 
 
@@ -59,16 +59,16 @@ export default function Observacion() {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 mt-6" data-anime>
-        <div className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
-          <img src={OBS1} alt="Bitácora de observación 1" className="w-full h-64 object-cover" />
+        <div className="bg-slate-50 border border-slate-200 overflow-hidden">
+          <img src={OBS1} alt="Bitácora de observación 1" className="w-full h-64 object-contain bg-white" />
           <p className="px-4 py-3 text-[11px] text-slate-500 italic leading-relaxed">
-            Collage a partir de Fotografía propias, con apoyo de diseño de la IA Copilot
+            Collage elaborado por el autor, realizado con fotografías propias tomadas en trabajo de campo durante recorrido en el Barrio La Magnolia.
           </p>
         </div>
-        <div className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
-          <img src={OBS2} alt="Bitácora de observación 2" className="w-full h-64 object-cover" />
+        <div className="bg-slate-50 border border-slate-200 overflow-hidden">
+          <img src={OBS2} alt="Bitácora de observación 2" className="w-full h-64 object-contain bg-white" />
           <p className="px-4 py-3 text-[11px] text-slate-500 italic leading-relaxed">
-            Collage a partir de Fotografía propias, con apoyo de diseño de la IA Copilot
+            Collage elaborado por el autor, realizado con fotografías propias tomadas en trabajo de campo durante recorrido en el Barrio La Magnolia.
           </p>
         </div>
       </div>

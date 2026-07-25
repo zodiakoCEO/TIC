@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import useAnimeReveal from '../../hooks/useAnimeReveal';
-import imagen4 from '../../../public/imagen4.jpeg';
+import imagenfinal1 from '../../../public/imagenfinal1.jpg';
 
 export default function Vulnerabilidades() {
   const container = useRef(null);
@@ -37,10 +37,13 @@ export default function Vulnerabilidades() {
       {/* 3. Imagen */}
       <div className="rounded-[32px] overflow-hidden border border-slate-100 shadow-sm" data-anime>
         <img
-          src={imagen4}
+          src={imagenfinal1}
           alt="Grupo comunitario en reunión sobre territorio"
           className="h-72 w-full object-cover object-center"
         />
+        <p className="px-4 py-3 text-[11px] text-slate-500 italic leading-relaxed bg-white">
+          Collage elaborado por el autor, realizado con fotografías propias tomadas en trabajo de campo durante recorrido en el Barrio La Magnolia, Envigado
+        </p>
       </div>
 
       {/* 4. Footer de Contexto y Oportunidades */}

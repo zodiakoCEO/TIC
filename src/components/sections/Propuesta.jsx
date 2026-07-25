@@ -147,6 +147,9 @@ export default function Propuesta() {
             </tbody>
           </table>
         </div>
+        <p className="text-[11px] text-slate-500 italic leading-relaxed">
+          Tabla con propuesta de algunas instituciones que ofrecen cursos para capacitación de manera digital. Investigación propia realizada por la web o por conocimiento de causa del autor que ha participado en algunos cursos que brindan estas plataformas.
+        </p>
       </div>
 
       {/* ── Pilar Tecnológico ── */}

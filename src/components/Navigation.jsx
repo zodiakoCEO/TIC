@@ -6,6 +6,7 @@ const tabs = [
   { id: 'propuesta', label: 'Propuesta' },
   { id: 'saberes', label: 'Saberes' },
   { id: 'vulnerabilidades', label: 'Vulnerabilidades' },
+  { id: 'lastic', label: 'LAS TIC' },
   { id: 'cibergrafía', label: 'Cibergrafía' },
   { id: 'cierre', label: 'Cierre' }
 ];

@@ -1,5 +1,4 @@
 import bgLocalIa from "../../assets/local-ia.jpeg";
-import principal1 from '../../../public/principal1.png';
 import { useState } from 'react';
 
 export default function Inicio({ setActiveTab }) {
@@ -65,14 +64,14 @@ export default function Inicio({ setActiveTab }) {
           
           {/* Imagen usando object-cover para que encaje perfecto sin deformarse */}
           <img 
-            src={principal1} 
-            alt="Hábitat TIC" 
+            src="/portada1 (3).jpg"
+            alt="Hábitat TIC"
             className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-1000 hover:scale-105"
           />
 
           <div className="absolute bottom-4 left-4 right-4 z-20">
             <p className="text-[11px] text-white/90 bg-black/40 backdrop-blur-sm rounded-lg px-3 py-2 leading-relaxed">
-              Collage a partir de Fotografía propias, con apoyo de diseño de la IA Copilot
+              Collage elaborado por el autor realizado con fotografías propias tomadas en trabajo de campo en el Barrio La Magnolia.
             </p>
           </div>
           
